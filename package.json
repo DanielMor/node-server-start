@@ -1,0 +1,40 @@
+{
+  "name": "node-server-start",
+  "version": "1.0.0",
+  "description": "A basic node server with babel es6",
+  "main": "index.js",
+  "scripts": {
+    "babel-node": "./node_modules/.bin/babel-node ./src/index.js",
+    "start": "nodemon --exec npm run babel-node",
+    "build": "./node_modules/.bin/babel src -d dist",
+    "server": "node dist/index.js",
+    "test": "mocha --compilers js:babel-register --recursive ./test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielMor/node-server-start.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielMor/node-server-start/issues"
+  },
+  "homepage": "https://github.com/DanielMor/node-server-start#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "debug": "^2.6.8",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "lodash": "^4.17.4",
+    "morgan": "^1.8.2",
+    "pug": "^2.0.0-rc.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2",
+    "nodemon": "^1.11.0"
+  }
+}
