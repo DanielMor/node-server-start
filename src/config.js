@@ -13,4 +13,4 @@ export default {
   },
   env: NODE_ENV || 'development',
   name: 'node-server-start',
-}
+};
